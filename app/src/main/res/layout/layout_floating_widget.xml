@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!--Root container-->
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <!--View while view is collapsed-->
+        <RelativeLayout
+            android:id="@+id/collapse_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!--Icon of floating widget -->
+            <ImageView
+                android:id="@+id/collapsed_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/message"
+                tools:ignore="ContentDescription" />
+
+            <!--Close button-->
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/ic_close"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <!--View while view is expanded-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/expanded_container"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_marginBottom="@dimen/cardMarginVertical"
+            android:layout_marginLeft="@dimen/cardMarginHorizontal"
+            android:layout_marginRight="@dimen/cardMarginHorizontal"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/ftextView_No_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/ftextView_No1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/ftextView_No2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/ftextView_r_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/r1"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/ftextView_r_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/r0"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/ftextView_y_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/y1"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/ftextView_y_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/y0"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/tumblr_white"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <!--button 1-->
+                <ToggleButton
+                    android:id="@+id/toggleButton1"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_with_outline" />
+
+                <!--button 2-->
+                <ToggleButton
+                    android:id="@+id/toggleButton2"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_with_outline"
+                    android:layout_marginStart="10dp"/>
+
+                <!--button 3-->
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_with_outline"
+                    android:layout_marginStart="10dp"/>
+
+                <!--button 4-->
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_with_outline"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp" >
+
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_marginStart="230dp"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/open_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_open"
+                    android:layout_marginStart="230dp"
+                    tools:ignore="ContentDescription"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

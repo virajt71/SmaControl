@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sms Control</string>
+    <string name="add">ADD</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="enable_widget">Enable Widget</string>
+    <string name="r0">r0</string>
+    <string name="r1">r1</string>
+    <string name="y1">y1</string>
+    <string name="y0">y0</string>
+
+</resources>
